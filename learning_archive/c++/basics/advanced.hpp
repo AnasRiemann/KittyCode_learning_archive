@@ -5,34 +5,20 @@
 #define CORNATUI_DISABLE_RANG_DOT_HPP
 #endif
 
-<<<<<<< HEAD
 #include "../libraries/cornatui/cornatui.hpp"
-=======
-#include "cornatui/cornatui.hpp"
->>>>>>> origin/main
 #include <iostream>
 #include <cmath>
 #include <string>
 #include <vector>
-<<<<<<< HEAD
 #include <cstdlib>
-=======
-
->>>>>>> origin/main
 
 
 namespace adv
 {
-<<<<<<< HEAD
     inline void advanced_topics();
     inline void generic_functions();
     inline void lambda_functions();
     inline void fst_linux_tui();
-=======
-    void advanced_topics();
-    void generic_functions();
-    void lambda_functions();
->>>>>>> origin/main
     template<typename type>
     inline void swap(type &value1 , type &value2);
 }
@@ -50,11 +36,7 @@ namespace adv
 
 
 
-<<<<<<< HEAD
 inline void advanced_topics()
-=======
-void advanced_topics()
->>>>>>> origin/main
 {
 
     const std::string title = "C++ ADVANCED TOPICS";
@@ -62,10 +44,7 @@ void advanced_topics()
     {
         "1 .  generic functions",
         "2 .  lambda functions",
-<<<<<<< HEAD
         "3 .  linux command line"
-=======
->>>>>>> origin/main
 
     };
 
@@ -77,10 +56,7 @@ void advanced_topics()
 
         if (select == "1"){tui::random_page("Generic functions", adv::generic_functions);}
         else if (select == "2"){tui::random_page("Lambda functions", adv::lambda_functions);}
-<<<<<<< HEAD
         else if (select == "3"){tui::random_page("linux command line", adv::fst_linux_tui);}
-=======
->>>>>>> origin/main
 
 
         else if (tui::check_break_keywords(select)){break;}
@@ -163,7 +139,6 @@ else
 
 
 
-<<<<<<< HEAD
 inline void fst_linux_tui()
 {
 std::string name ;
@@ -175,10 +150,6 @@ std::cout<<("    # You have created "+ name + " folder")<<"\n";
 
 
 }
-=======
-
-
->>>>>>> origin/main
 
 
 

@@ -1,15 +1,7 @@
 #ifndef BASICS_HPP
 #define BASICS_HPP
 
-<<<<<<< HEAD
 #include "../libraries/cornatui/cornatui.hpp"
-=======
-#ifndef CORNATUI_DISABLE_RANG_DOT_HPP
-#define CORNATUI_DISABLE_RANG_DOT_HPP
-#endif
-
-#include "cornatui/cornatui.hpp"
->>>>>>> origin/main
 #include <iostream>
 #include <cmath>
 #include <string>

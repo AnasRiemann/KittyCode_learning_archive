@@ -1,11 +1,7 @@
 #ifndef OOP_CODE_BEAUITY_HPP
 #define OOP_CODE_BEAUITY_HPP
 
-<<<<<<< HEAD
 #include "../../libraries/cornatui/cornatui.hpp"
-=======
-#include "cornatui/cornatui.hpp"
->>>>>>> origin/main
 
 namespace oop
 {
@@ -141,7 +137,6 @@ inline void inheritance()
 }
 
 
-<<<<<<< HEAD
 //###################################################################################################
 //###################################################################################################
 
@@ -216,8 +211,6 @@ std::cout<<"   # nCr = 8C5 = "<<nCr<<"\n";
 
 
 
-=======
->>>>>>> origin/main
 }
 
 #endif
