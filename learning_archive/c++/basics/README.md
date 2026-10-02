@@ -27,7 +27,10 @@ Unlike the other course folders in this repo, this one isn't a walkthrough of so
 
 7. Generic (template) functions
 8. Lambda functions
+<<<<<<< HEAD
 9. Basics of linux commands (coming soon)
+=======
+>>>>>>> origin/main
 
 ## Files
 
@@ -35,7 +38,11 @@ Unlike the other course folders in this repo, this one isn't a walkthrough of so
 |---|---|
 | `basics.hpp` | Topics 1–6, each implemented as its own function under `namespace basics` |
 | `advanced.hpp` | Topics 7–8 (the bonus round), under `namespace adv` |
+<<<<<<< HEAD
 
+=======
+| `basics_program.cpp` | Entry point — an interactive menu (`namespace ui`) to pick and run any topic |
+>>>>>>> origin/main
 
 ## Requirements
 

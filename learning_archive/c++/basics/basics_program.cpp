@@ -50,7 +50,14 @@ int main()
         {
             adv::advanced_topics();
         }
+<<<<<<< HEAD
         else if (tui::check_break_keywords(select)){break;}
+=======
+        else if (tui::check_break_keywords(select))
+        {
+            break;
+        }
+>>>>>>> origin/main
 
     } while (true);
 

@@ -30,8 +30,13 @@ The explanations and ideas belong to the original creator. What's here is my own
 
 | File | Description |
 |---|---|
+<<<<<<< HEAD
 | `pointers.hpp` | Every topic above, implemented as its own function under `namespace pointers` |
 | `pointers_code_beauity.cpp` | Entry point — an interactive menu (`namespace tui`) to pick and run any topic |
+=======
+| `pointers.hpp` | Every topic above, implemented as its own function under `namespace ptr` |
+| `pointers_code_beauity.cpp` | Entry point — an interactive menu (`namespace ui`) to pick and run any topic |
+>>>>>>> origin/main
 
 ## Requirements
 

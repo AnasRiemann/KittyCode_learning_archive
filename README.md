@@ -92,7 +92,10 @@ KittyCode_learning_archive/
 |---|---|---|---|
 | C++ Basics & Beyond | C++ | Self-written (no single course) | [`learning_archive/c++/basics/`](./learning_archive/c++/basics) |
 | Pointers | C++ | CodeBeauty (YouTube) | [`learning_archive/c++/pointers/`](./learning_archive/c++/pointers) |
+<<<<<<< HEAD
 | oop | C++ | CodeBeauty (YouTube) | [`learning_archive/c++/oop/`](./learning_archive/c++/oop) |
+=======
+>>>>>>> origin/main
 
 *(This table grows as new courses are added — check each folder's own README for details.)*
 

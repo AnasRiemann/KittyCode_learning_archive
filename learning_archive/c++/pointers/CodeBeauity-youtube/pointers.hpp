@@ -1,5 +1,6 @@
 #ifndef POINTERS_HPP
 #define POINTERS_HPP
+<<<<<<< HEAD
 #include "../../libraries/cornatui/cornatui.hpp"
 #include <iostream>
 #include <memory>
@@ -10,6 +11,68 @@ namespace pointers
 
     // playlist link : https://youtube.com/playlist?list=PL43pGnjiVwgSSRlwfahAuIqoJ8TfDIlHq&si=UVM-2fRo8MXoNrZ7
     // pointer = pointer
+=======
+
+#include "cornatui/cornatui.hpp"
+
+namespace ui
+{
+
+    inline void page(const std::string &title, void (*funcPtr)())
+    {
+
+        ans::IntRGB255 fgColor(ans::get_random_number(128, 240), ans::get_random_number(128, 240), ans::get_random_number(128, 245));
+        ans::IntRGB255 bgColor(fgColor.inverse().darkness(2));
+        ans::IntRGB255 aColor(fgColor.inverse().brightness(3));
+        tui::Border style[8] = {tui::Border::bold, tui::Border::cross, tui::Border::hash, tui::Border::mix, tui::Border::single, tui::Border::star, tui::Border::wave, tui::Border::zero};
+        std::string hrStyle[8] = {"=", "+", "#", "~-", "-", "=", "~", "o"};
+        std::cout << tui::str::cls(tui::Screen::view) << tui::str::br();
+
+        std::cout << tui::str::box(title, style[ans::get_random_number(0, 7)], fgColor, bgColor, aColor);
+
+        std::cout << tui::str::fg_color(aColor);
+        const size_t width = ans::get_random_number(80, 90);
+
+        std::cout << tui::str::hr(width, hrStyle[ans::get_random_number(0, 7)], 2);
+
+        funcPtr();
+
+        std::cout << tui::str::hr(width, hrStyle[ans::get_random_number(0, 7)], 2);
+        tui::pause();
+        return;
+    }
+
+    inline void main_page(const std::string &title, const std::vector<std::string> &list)
+    {
+
+        ans::IntRGB255 fgColor(ans::get_random_number(150, 240), ans::get_random_number(160, 240), ans::get_random_number(175, 245));
+        ans::IntRGB255 bgColor(fgColor.inverse().darkness(2));
+        ans::IntRGB255 aColor(fgColor.inverse().brightness(4));
+        tui::Border style[8] = {tui::Border::bold, tui::Border::cross, tui::Border::hash, tui::Border::mix, tui::Border::single, tui::Border::star, tui::Border::wave, tui::Border::zero};
+        std::string hrStyle[8] = {"=", "+", "#", "~-", "-", "=", "~", "o"};
+        const size_t width = ans::get_random_number(90, 95);
+
+        std::ostringstream os;
+        os << tui::str::cls(tui::Screen::full) << tui::str::br();
+        os << tui::str::box(title, style[ans::get_random_number(0, 7)], fgColor, bgColor, aColor, 1);
+
+        os << tui::str::table(list, style[ans::get_random_number(0, 7)], fgColor, bgColor, aColor);
+        os << tui::str::fg_color(aColor);
+        os << tui::str::hr(width, hrStyle[ans::get_random_number(0, 7)], 2) << " # Select option [1-" << list.size() << "] , to exit [0] |> option -> ";
+
+        std::cout << tui::str::translate(os.str(), 2, 0);
+
+        return;
+    }
+
+}
+
+namespace ptr
+{
+
+    // playlist link : https://youtube.com/playlist?list=PL43pGnjiVwgSSRlwfahAuIqoJ8TfDIlHq&si=UVM-2fRo8MXoNrZ7
+    // pointer = ptr
+>>>>>>> origin/main
 
     /*############################################################################################################*/
     /*############################################################################################################*/
@@ -20,16 +83,28 @@ namespace pointers
     inline void Introduction_to_pointers()
     {
         int x = 45;
+<<<<<<< HEAD
         int *pointer = &x;
+=======
+        int *ptr = &x;
+>>>>>>> origin/main
         std::cout << "    A pointer in C++ is a variable that stores the memory address \n    of another variable rather than a direct value." << "\n\n";
 
         std::cout << "    the value of x          = " << x << "\n";
         std::cout << "    the address of x        = " << &x << "\n\n";
+<<<<<<< HEAD
         std::cout << "    pointer of x            = " << pointer << "\n";
         std::cout << "    dereference of pointer  = " << *pointer << "\n\n";
 
         std::cout << "    update x by pointer     = ";
         std::cin >> *pointer;
+=======
+        std::cout << "    pointer of x            = " << ptr << "\n";
+        std::cout << "    dereference of pointer  = " << *ptr << "\n\n";
+
+        std::cout << "    update x by pointer     = ";
+        std::cin >> *ptr;
+>>>>>>> origin/main
         std::cout << "\n";
         std::cout << "    the new value of x      = " << x << "\n";
     }
@@ -44,12 +119,17 @@ namespace pointers
     // 2. Casting to the wrong type corrupts memory.
     // 3. These bugs are very difficult to trace and debug.
 
+<<<<<<< HEAD
     void print(void *pointer, char type)
+=======
+    void print(void *ptr, char type)
+>>>>>>> origin/main
     {
 
         switch (type)
         {
         case 'i':
+<<<<<<< HEAD
             std::cout << *(int *)pointer;
             break;
         case 'c':
@@ -60,6 +140,18 @@ namespace pointers
             break;
         case 's':
             std::cout << *(std::string *)pointer;
+=======
+            std::cout << *(int *)ptr;
+            break;
+        case 'c':
+            std::cout << *(char *)ptr;
+            break;
+        case 'd':
+            std::cout << *(double *)ptr;
+            break;
+        case 's':
+            std::cout << *(std::string *)ptr;
+>>>>>>> origin/main
             break;
         default:
             std::cout << NAN;
@@ -82,7 +174,11 @@ namespace pointers
 
         std::cout << " 1. A generic pointer that holds ANY memory address.\n";
         std::cout << " 2. It DOES NOT know the data type it points to.\n";
+<<<<<<< HEAD
         std::cout << " 3. You CANNOT dereference (*pointer) directly.\n";
+=======
+        std::cout << " 3. You CANNOT dereference (*ptr) directly.\n";
+>>>>>>> origin/main
         std::cout << " 4. You MUST cast it back to the original type first.\n\n";
 
         std::cout << "    print Integer  number = ";
@@ -356,7 +452,11 @@ namespace pointers
 
     /*[7]*/
 
+<<<<<<< HEAD
 
+=======
+#include <memory>
+>>>>>>> origin/main
 
     class example52
     {
@@ -372,8 +472,11 @@ namespace pointers
         inline ~example52() { std::cout << "\n   [#] destructor is invoked\n"; }
     };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
     inline void smart_pointers()
     {
         std::cout << "     # unique pointer & shared pointer" << "\n\n";
@@ -383,7 +486,11 @@ namespace pointers
         std::unique_ptr<int> numberPtr1 = std::make_unique<int>(37);
 
         std::cout << "    [1] this is memory address : " << numberPtr1.get() << "\n";
+<<<<<<< HEAD
         std::cout << "     # dereference of pointer [1]  = " << *numberPtr1 << "\n";
+=======
+        std::cout << "     # dereference of ptr [1]  = " << *numberPtr1 << "\n";
+>>>>>>> origin/main
 
         std::cout << "\n";
 
@@ -452,9 +559,12 @@ namespace pointers
 
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/main
     /*====================================================================================================================================*/
     /*====================================================================================================================================*/
 
